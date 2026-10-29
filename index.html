@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colégio Ambróisa - Educação que transforma o futuro. Uma instituição dedicada ao desenvolvimento intelectual, social e cidadão de nossos alunos.">
+    <meta name="keywords" content="escola, colégio, educação, ensino fundamental, ensino médio, colégio ambróisa">
+    <meta name="author" content="Colégio Ambrósia">
+    <title>Colégio Ambrosia | Educação que Transforma o Futuro</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#102A43',      /* Azul-escuro principal */
+                            medium: '#245B8F',    /* Azul intermediário */
+                            light: '#F3F6F9',     /* Cinza-claro fundos */
+                            gold: '#F4C542',      /* Amarelo-dourado detalhes */
+                            goldHover: '#e0b232',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(16, 42, 67, 0.08)',
+                        'card': '0 4px 20px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 20px 35px -10px rgba(16, 42, 67, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos personalizados complementares */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #334155;
+            background-color: #FFFFFF;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#245B8F 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+            opacity: 0.07;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        /* Animações e Transições */
+        .transition-all-custom {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Estilização da barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F3F6F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #245B8F;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #102A43;
+        }
+
+        /* Foco Visível para Acessibilidade */
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 3px solid #F4C542;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-gold selection:text-brand-dark flex flex-col min-h-screen">
+
+    <!-- ==================== 1. CABEÇALHO & MENU DE NAVEGAÇÃO ==================== -->
+    <header id="header" class="sticky top-0 z-40 w-full bg-brand-dark text-white shadow-lg transition-all duration-300">
+        <!-- Faixa de aviso/contato rápida no topo -->
+        <div class="bg-[#0b1f33] border-b border-white/10 text-xs py-2 px-4 sm:px-8">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-slate-300">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-brand-gold"></i> [EDITÁVEL: R. da Educação, 123 - Centro]</span>
+                    <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-gold"></i> [EDITÁVEL: (00) 1234-5678]</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-brand-gold font-medium"><i class="fa-solid fa-door-open mr-1"></i> Atendimento: Seg a Sex, 07h às 18h</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logotipo / Nome da Instituição -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none" aria-label="Colégio Ambróisa - Página Inicial">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-medium to-brand-dark border-2 border-brand-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-graduation-cap text-brand-gold text-2xl"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl sm:text-2xl font-bold tracking-tight text-white leading-none">COLÉGIO</span>
+                        <span class="text-lg sm:text-xl font-extrabold tracking-widest text-brand-gold leading-tight">ESTADUAL IRMÃ AMBROSIA SABATOVICH</span>
+                    </div>
+                </a>
+
+                <!-- Navegação Desktop -->
+                <nav class="hidden lg:flex items-center space-x-1 xl:space-x-2" aria-label="Navegação Principal">
+                    <a href="#inicio" class="px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-brand-gold hover:bg-white/5 transition-colors">Início</a>
+                    <a href="#sobre" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-brand-gold hover:bg-white/5 transition-colors">Sobre a Escola</a>
+                    <a href="#ensino" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-brand-gold hover:bg-white/5 transition-colors">Ensino</a>
+                    <a href="#turnos" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-brand-gold hover:bg-white/5 transition-colors">Turnos</a>
+                    <a href="#estrutura" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-brand-gold hover:bg-white/5 transition-colors">Estrutura</a>
+                    <a href="#avisos" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-brand-gold hover:bg-white/5 transition-colors">Avisos</a>
+                    <a href="#galeria" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-200 hover:text-brand-gold hover:bg-white/5 transition-colors">Galeria</a>
+                    <a href="#contato" class="ml-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-brand-gold text-brand-dark hover:bg-brand-goldHover transition-colors shadow-md flex items-center gap-2">
+                        <i class="fa-regular fa-paper-plane"></i> Contato
+                    </a>
+                </nav>
+
+                <!-- Botão Menu Mobile -->
+                <div class="flex lg:hidden">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-200 hover:text-brand-gold focus:outline-none p-2 rounded-lg bg-white/5" aria-expanded="false" aria-label="Abrir Menu Principal">
+                        <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Expandível -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-dark/95 border-b border-white/10 px-4 pt-2 pb-6 space-y-2">
+            <a href="#inicio" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-white hover:bg-brand-medium/50">Início</a>
+            <a href="#sobre" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-brand-medium/50">Sobre a Escola</a>
+            <a href="#ensino" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-brand-medium/50">Ensino</a>
+            <a href="#turnos" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-brand-medium/50">Turnos</a>
+            <a href="#estrutura" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-brand-medium/50">Estrutura</a>
+            <a href="#avisos" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-brand-medium/50">Mural de Avisos</a>
+            <a href="#galeria" class="mobile-link block px-4 py-3 rounded-lg text-base font-medium text-slate-200 hover:bg-brand-medium/50">Galeria de Fotos</a>
+            <a href="#contato" class="mobile-link block px-4 py-3 rounded-lg text-base font-semibold bg-brand-gold text-brand-dark text-center mt-2">Fale Conosco</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- ==================== 2. HERO SECTION ==================== -->
+        <section id="inicio" class="relative bg-brand-dark text-white overflow-hidden py-16 lg:py-24">
+            <!-- Padrão geométrico decorativo no fundo -->
+            <div class="absolute inset-0 bg-pattern"></div>
+            
+            <!-- Elementos decorativos circulares de destaque -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-medium/20 blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-gold/10 blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Textos do Hero -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-brand-gold/30 text-brand-gold text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                            <i class="fa-solid fa-sparkles"></i> Tradição e Inovação Pedagógica
+                        </div>
+
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Educação que <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-300 to-yellow-500">transforma</span> o futuro.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            No Colégio Ambróisa, cultivamos o conhecimento, o respeito e a autonomia. Nossa missão é formar cidadãos conscientes, preparados para os desafios do mundo moderno através de um ensino acolhedor e humanizado.
+                        </p>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#sobre" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-gold text-brand-dark font-bold text-base hover:bg-brand-goldHover transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-compass"></i> Conheça nossa escola
+                            </a>
+                            <a href="#contato" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-medium text-white font-bold text-base hover:bg-brand-medium/80 border border-white/20 transition-all shadow-lg hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                                <i class="fa-regular fa-envelope"></i> Entre em contato
+                            </a>
+                        </div>
+
+                        <!-- Mini estatísticas destacadas -->
+                        <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-center lg:text-left">
+                            <div>
+                                <span class="block text-2xl font-bold text-brand-gold">100%</span>
+                                <span class="text-xs text-slate-400">Dedicação e Cuidado</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-brand-gold">2 Turnos</span>
+                                <span class="text-xs text-slate-400">Manhã e Tarde</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-brand-gold">476</span>
+                                <span class="text-xs text-slate-400">Alunos Atendidos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagem Ilustrativa de Destaque no Hero -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-md lg:max-w-none">
+                            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-gold to-brand-medium rounded-2xl blur opacity-30"></div>
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-white/20 bg-brand-dark">
+                                <img src="IMG_20260910_110135774.jpg" 
+                                     alt="Estudantes interagindo e aprendendo no Colégio Ambróisa" 
+                                     class="w-full h-[380px] sm:h-[440px] object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                                     onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Ambiente+Escolar+Col%C3%A9gio+Ambr%C3%B3isa'">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl glass-card text-brand-dark">
+                                    <div class="flex items-center gap-3">
+                                        <div class="p-2 bg-brand-gold rounded-lg text-brand-dark">
+                                            <i class="fa-solid fa-heart text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500">Comunidade Escolar</h2>
+                                            <p class="text-sm font-semibold text-brand-dark">Ambiente Acolhedor e Seguro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 3. SOBRE A ESCOLA ==================== -->
+        <section id="sobre" class="py-20 bg-brand-light relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Nossa História & Propósito</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Sobre o Colégio Ambróisa</h2>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- História e Texto Educacional -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="bg-white p-8 rounded-2xl shadow-soft border border-slate-200/80">
+                            <h3 class="text-2xl font-bold text-brand-dark mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-book-bookmark text-brand-gold"></i> História e Compromisso
+                            </h3>
+                            
+                            <!-- Campo Texto Editável para Informações Oficiais -->
+                            <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+                                <p class="p-3 bg-amber-50 border-l-4 border-amber-400 text-xs text-amber-800 rounded-r">
+                                    <i class="fa-solid fa-pen-to-square mr-1"></i> <strong>Espaço Editável:</strong> Este texto pode ser facilmente atualizado para incluir a história oficial, ano de fundação e os dados registrados da instituição.
+                                </p>
+                                <p>
+                                    O <strong>Colégio Ambróisa</strong> consolidou-se como um pilar de aprendizado e cidadania na nossa comunidade. Fundamentado na busca constante pela excelência pedagógica, o colégio oferece uma jornada educativa integra, valorizando tanto o aspecto acadêmico quanto o lado socioemocional.
+                                </p>
+                                <p>
+                                    Acreditamos que a parceria ativa entre a escola e as famílias é essencial para o desenvolvimento pleno das crianças e jovens. Aqui, cada estudante é encorajado a cultivar a curiosidade intelectual, o respeito mútuo e a responsabilidade social.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Compromisso com a Aprendizagem -->
+                        
+                            </div>
+                         
+                    </div>
+
+                    <!-- Coluna com Missão, Visão, Valores e Métricas Oficial -->
+                    <div class="lg:col-span-5 space-y-6">
+                     
+               <!-- Cartão Destaque: 476 Alunos -->
+               <div class="bg-gradient-to-br from-brand-dark to-brand-medium text-white p-8 rounded-2xl shadow-hover relative overflow-hidden text-center border-2 border-brand-gold/40">
+                <div class="absolute -right-6 -bottom-6 opacity-10 text-white text-9xl">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <span class="text-brand-gold font-bold text-xs uppercase tracking-wider block mb-1">Comunidade Escolar</span>
+                <div class="text-5xl sm:text-6xl font-black text-white my-2 tracking-tight">476</div>
+                <h4 class="text-lg font-bold text-slate-100">Alunos Matriculados</h4>
+                <p class="text-xs text-slate-300 mt-2 max-w-xs mx-auto">Desenvolvendo seu potencial diariamente em um ambiente seguro, estimulante e acolhedor.</p>
+            </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 4. ENSINO E APRENDIZAGEM ==================== -->
+        <section id="ensino" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Pilares Pedagógicos</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Ensino e Aprendizagem</h2>
+                    <p class="text-slate-600 mt-2 text-sm sm:text-base">Proposta educacional focada no desenvolvimento integral do estudante.</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-brand-light p-8 rounded-2xl border border-slate-200/80 hover:shadow-hover hover:-translate-y-1 transition-all-custom group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brand-medium transition-colors">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Desenvolvimento Intelectual</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Estimulação contínua do pensamento crítico, curiosidade científica e autonomia na busca pelo conhecimento acadêmico.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-brand-light p-8 rounded-2xl border border-slate-200/80 hover:shadow-hover hover:-translate-y-1 transition-all-custom group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brand-medium transition-colors">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Leitura e Escrita</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Incentivo constante à interpretação textual, expressão escrita clara, criativa e apreciação das diversas manifestações literárias.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-brand-light p-8 rounded-2xl border border-slate-200/80 hover:shadow-hover hover:-translate-y-1 transition-all-custom group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brand-medium transition-colors">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Matemática & Raciocínio</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Resolução prática de problemas, estímulo ao raciocínio lógico-matemático e aplicação dos conceitos no cotidiano.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-brand-light p-8 rounded-2xl border border-slate-200/80 hover:shadow-hover hover:-translate-y-1 transition-all-custom group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brand-medium transition-colors">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Criatividade & Atividades</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Projetos práticos, artes e experiências lúdicas que transformam ideias teóricas em conquistas visíveis e dinâmicas.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="bg-brand-light p-8 rounded-2xl border border-slate-200/80 hover:shadow-hover hover:-translate-y-1 transition-all-custom group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brand-medium transition-colors">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Convivência em Equipe</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Valorização do trabalho colaborativo, da liderança positiva, do diálogo e do respeito às opiniões do grupo.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="bg-brand-light p-8 rounded-2xl border border-slate-200/80 hover:shadow-hover hover:-translate-y-1 transition-all-custom group">
+                        <div class="w-14 h-14 rounded-xl bg-brand-dark text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-md group-hover:bg-brand-medium transition-colors">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-dark mb-3">Formação Cidadã</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Conscientização sobre deveres e direitos, sustentabilidade ambiental, ética e participação ativa na sociedade.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 5. TURNOS DE FUNCIONAMENTO ==================== -->
+        <section id="turnos" class="py-20 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Organização dos Períodos</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Turnos de Funcionamento</h2>
+                    <p class="text-slate-600 mt-2 text-sm">O Colégio Ambróisa atende seus alunos nos períodos da Manhã e da Tarde.</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Turno da Manhã -->
+                    <div class="bg-white rounded-2xl shadow-card border border-slate-200/80 overflow-hidden flex flex-col hover:shadow-hover transition-all">
+                        <div class="bg-gradient-to-r from-brand-dark to-brand-medium p-6 text-white flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-brand-gold/20 text-brand-gold flex items-center justify-center text-2xl">
+                                    <i class="fa-solid fa-sun"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">Turno da Manhã</h3>
+                                    <span class="text-xs text-slate-300">Período Matutino</span>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-brand-gold border border-brand-gold/30 font-semibold">Ativo</span>
+                        </div>
+
+                        <div class="p-8 space-y-6 flex-grow">
+                            <!-- Horários (Editáveis) -->
+                            <div class="p-4 bg-brand-light rounded-xl border border-slate-200">
+                                <h4 class="text-xs font-bold uppercase text-brand-medium tracking-wider mb-2">
+                                    <i class="fa-regular fa-clock mr-1"></i> Horário das Aulas (Editável)
+                                </h4>
+                                <div class="text-slate-700 text-sm font-semibold flex justify-between items-center">
+                                    <span>Entrada: <strong><div 07h40=""></div></strong></span>
+                                    <span>•</span>
+                                    <span>Saída: <strong>[12h00]</strong></span>
+                                </div>
+                            </div>
+
+                            <!-- Atividades -->
+                            <div>
+                                <h4 class="text-sm font-bold text-brand-dark mb-3">Atividades e Foco do Período:</h4>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-medium mt-1"></i>
+                                        <span>Disciplinas curriculares regulares e projetos de aprofundamento.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-medium mt-1"></i>
+                                        <span>Atividades práticas e momentos de estudos orientados em sala.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-medium mt-1"></i>
+                                        <span>Intervalos recreativos supervisionados por educadores.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Turno da Tarde -->
+                    <div class="bg-white rounded-2xl shadow-card border border-slate-200/80 overflow-hidden flex flex-col hover:shadow-hover transition-all">
+                        <div class="bg-gradient-to-r from-brand-medium to-brand-dark p-6 text-white flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-lg bg-brand-gold/20 text-brand-gold flex items-center justify-center text-2xl">
+                                    <i class="fa-solid fa-cloud-sun"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold">Turno da Tarde</h3>
+                                    <span class="text-xs text-slate-300">Período Vespertino</span>
+                                </div>
+                            </div>
+                            <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-brand-gold border border-brand-gold/30 font-semibold">Ativo</span>
+                        </div>
+
+                        <div class="p-8 space-y-6 flex-grow">
+                            <!-- Horários (Editáveis) -->
+                            <div class="p-4 bg-brand-light rounded-xl border border-slate-200">
+                                <h4 class="text-xs font-bold uppercase text-brand-medium tracking-wider mb-2">
+                                    <i class="fa-regular fa-clock mr-1"></i> Horário das Aulas (Editável)
+                                </h4>
+                                <div class="text-slate-700 text-sm font-semibold flex justify-between items-center">
+                                    <span>Entrada: <strong>[13h00]</strong></span>
+                                    <span>•</span>
+                                    <span>Saída: <strong>[17h00]</strong></span>
+                                </div>
+                            </div>
+
+                            <!-- Atividades -->
+                            <div>
+                                <h4 class="text-sm font-bold text-brand-dark mb-3">Atividades e Foco do Período:</h4>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-medium mt-1"></i>
+                                        <span>Desenvolvimento de rotinas pedagógicas e vivências dinâmicas.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-medium mt-1"></i>
+                                        <span>Incentivo à leitura, artes, música e raciocínio prático.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-medium mt-1"></i>
+                                        <span>Espaço social de integração e acolhimento dos estudantes.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 6. ESTRUTURA DA ESCOLA ==================== -->
+        <section id="estrutura" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Ambientes Planejados</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Estrutura da Escola</h2>
+                    <p class="text-slate-600 mt-2 text-sm">Espaços organizados para proporcionar conforto, aprendizado e segurança.</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Salas de Aula -->
+                    <div class="bg-brand-light rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-hover transition-all">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="2.jpg" 
+                                 alt="Salas de Aula" 
+                                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Salas+de+Aula'">
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Aulas</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Salas de Aula Climatizadas</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                Ambientes bem iluminados, arejados e mobiliados ergonomicamente para garantir o foco no aprendizado diário.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Biblioteca -->
+                    <div class="bg-brand-light rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-hover transition-all">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="3.jpg" 
+                                 alt="Biblioteca e Leitura" 
+                                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Biblioteca'">
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Leitura</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Espaço de Leitura e Biblioteca</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                Acervo didático e literário cuidadosamente selecionado para estimular a imaginação e a pesquisa acadêmica.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Pátio e Recreação -->
+                    <div class="bg-brand-light rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-hover transition-all">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="6.jpg" 
+                                 alt="Pátio de Convivência" 
+                                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Patio+e+Convivencia'">
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Convivência</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Pátio e Áreas Comuns</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                Espaço amplo e seguro para recreação, socialização e eventos culturais da comunidade escolar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Espaços de Atividades Práticas -->
+                    <div class="bg-brand-light rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-hover transition-all">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="5.jpg" 
+                                 alt="Espaços de Atividades" 
+                                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Atividades+Multiuso'">
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Multiuso</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Espaços Multiuso</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                Áreas destinadas a apresentações, trabalhos em grupo e vivências pedagógicas diversificadas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Ambientes Administrativos -->
+                    <div class="bg-brand-light rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-hover transition-all">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="7.jpg" 
+                                 alt="Ambientes Administrativos" 
+                                 class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Atendimento+Secretaria'">
+                            <span class="absolute top-3 left-3 bg-brand-dark/80 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">Atendimento</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Secretaria e Coordenação</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                                Setor preparado para atender pais e responsáveis com eficiência, transparência e cordialidade.
+                            </p>
+                        </div>
+                    </div>
+
+                   
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 7. MURAL DE AVISOS E NOTÍCIAS ==================== -->
+        <section id="avisos" class="py-20 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Comunicação Oficial</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Mural de Avisos & Comunicados</h2>
+                    <p class="text-slate-600 mt-2 text-sm">Fique por dentro das datas, reuniões e novidades do Colégio Ambróisa.</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Aviso 1: Reunião -->
+                    <article class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-hover transition-all">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-bold">Reunião</span>
+                                <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-calendar mr-1"></i> [EDITÁVEL: Data]</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Reunião de Pais e Responsáveis</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
+                                [Demonstrativo] Convidamos todos os pais para a nossa primeira reunião ordinária do semestre para alinhamentos pedagógicos.
+                            </p>
+                        </div>
+                        <button onclick="openNoticeModal('Reunião de Pais e Responsáveis', '[EDITÁVEL: Data Oficial]', 'Reunião', 'Convidamos todos os responsáveis para o nosso encontro pedagógico. Na ocasião, abordaremos o planejamento escolar, rotinas de estudos e tiraremos dúvidas sobre o desenvolvimento dos nossos estudantes.')" 
+                                class="text-brand-medium hover:text-brand-dark font-bold text-xs uppercase tracking-wider flex items-center gap-1 mt-2 focus:outline-none">
+                            Ler Comunicado Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </article>
+
+                    <!-- Aviso 2: Calendário -->
+                    <article class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-hover transition-all">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-bold">Calendário</span>
+                                <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-calendar mr-1"></i> [EDITÁVEL: Data]</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Início do Ano Letivo</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
+                                [Demonstrativo] Informações completas sobre o retorno das aulas, horários de recepção e organização de turmas.
+                            </p>
+                        </div>
+                        <button onclick="openNoticeModal('Início do Ano Letivo', '[EDITÁVEL: Data Oficial]', 'Calendário', 'Informamos a toda a comunidade escolar os horários especiais para a primeira semana de acolhimento dos estudantes do Turno da Manhã e Turno da Tarde.')" 
+                                class="text-brand-medium hover:text-brand-dark font-bold text-xs uppercase tracking-wider flex items-center gap-1 mt-2 focus:outline-none">
+                            Ler Comunicado Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </article>
+
+                    <!-- Aviso 3: Matrículas -->
+                    <article class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6 flex flex-col justify-between hover:shadow-hover transition-all">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-bold">Matrículas</span>
+                                <span class="text-xs text-slate-400 font-medium"><i class="fa-regular fa-calendar mr-1"></i> [EDITÁVEL: Data]</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-brand-dark mb-2">Atendimento de Matrículas</h3>
+                            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3 mb-4">
+                                [Demonstrativo] Horários e documentos necessários para confirmação e novas matrículas na secretaria da escola.
+                            </p>
+                        </div>
+                        <button onclick="openNoticeModal('Atendimento de Matrículas', '[EDITÁVEL: Data Oficial]', 'Matrículas', 'A secretaria do Colégio Ambróisa está com atendimento presencial e online ativado para o esclarecimento de dúvidas referentes ao processo de matrícula.')" 
+                                class="text-brand-medium hover:text-brand-dark font-bold text-xs uppercase tracking-wider flex items-center gap-1 mt-2 focus:outline-none">
+                            Ler Comunicado Completo <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para Avisos/Comunicados -->
+        <div id="notice-modal" class="fixed inset-0 z-50 bg-brand-dark/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+                <button onclick="closeNoticeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="mb-4">
+                    <span id="modal-tag" class="bg-brand-medium/10 text-brand-medium text-xs px-3 py-1 rounded-full font-bold">Categoria</span>
+                    <span id="modal-date" class="text-xs text-slate-400 ml-2">Data</span>
+                </div>
+                <h3 id="modal-title" class="text-2xl font-bold text-brand-dark mb-4">Título do Aviso</h3>
+                <div id="modal-body" class="text-slate-600 text-sm leading-relaxed mb-6 space-y-3">
+                    Conteúdo do comunicado...
+                </div>
+                <div class="text-right">
+                    <button onclick="closeNoticeModal()" class="px-5 py-2.5 bg-brand-dark text-white text-sm font-semibold rounded-xl hover:bg-brand-medium">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== 8. GALERIA DE FOTOS ==================== -->
+        <section id="galeria" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Vivências e Momentos</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Galeria de Fotos</h2>
+                    <p class="text-slate-600 mt-2 text-sm">Registros demonstrativos do cotidiano, eventos e atividades do colégio.</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <!-- Grid de Imagens da Galeria -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Foto 1 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm cursor-pointer border border-slate-200 bg-brand-dark h-64"
+                         onclick="openGalleryModal('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80', 'Atividades pedagógicas e aprendizado em grupo no ambiente escolar.')">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" 
+                             alt="Atividades escolares" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                             onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Foto+1'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-brand-gold"></i> Clique para ampliar</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 2 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm cursor-pointer border border-slate-200 bg-brand-dark h-64"
+                         onclick="openGalleryModal('https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80', 'Incentivo ao estudo e à pesquisa em ambiente acolhedor.')">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" 
+                             alt="Alunos estudando" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                             onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Foto+2'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-brand-gold"></i> Clique para ampliar</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 3 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm cursor-pointer border border-slate-200 bg-brand-dark h-64"
+                         onclick="openGalleryModal('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80', 'Momentos de recreação e desenvolvimento social.')">
+                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" 
+                             alt="Recreação no pátio" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                             onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Foto+3'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-brand-gold"></i> Clique para ampliar</span>
+                        </div>
+                    </div>
+
+                    <!-- Foto 4 -->
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm cursor-pointer border border-slate-200 bg-brand-dark h-64"
+                         onclick="openGalleryModal('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80', 'Convivência saudável e trabalho colaborativo.')">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" 
+                             alt="Estudantes em interação" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90 group-hover:opacity-100"
+                             onerror="this.src='https://placehold.co/600x400/102A43/FFFFFF?text=Foto+4'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                            <span class="text-white text-xs font-medium"><i class="fa-solid fa-magnifying-glass-plus mr-1 text-brand-gold"></i> Clique para ampliar</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Lightbox de Imagem Ampliada -->
+        <div id="gallery-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4">
+            <button onclick="closeGalleryModal()" class="absolute top-6 right-6 text-white hover:text-brand-gold text-3xl font-bold z-10 focus:outline-none">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="max-w-4xl w-full max-h-[85vh] flex flex-col items-center justify-center">
+                <img id="gallery-modal-img" src="" alt="Imagem Ampliada" class="max-h-[75vh] w-auto object-contain rounded-xl shadow-2xl border border-white/20">
+                <p id="gallery-modal-caption" class="text-slate-300 text-sm mt-4 text-center px-4 max-w-2xl font-medium"></p>
+            </div>
+        </div>
+
+        <!-- ==================== 9. DIFERENCIAIS DA INSTITUIÇÃO ==================== -->
+        <section class="py-20 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Por que escolher o Ambróisa</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Diferenciais da Nossa Escola</h2>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="p-3 bg-brand-medium/10 text-brand-medium rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-base">Compromisso com a Educação</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Prioridade total para a qualidade pedagógica e a constante atualização do aprendizado.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="p-3 bg-brand-medium/10 text-brand-medium rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-base">Ambiente Acolhedor</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Espaço onde cada aluno é acolhido com empatia e individualidade valorizada.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="p-3 bg-brand-medium/10 text-brand-medium rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-base">Respeito às Diferenças</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Promoção ativa da diversidade, da inclusão e da convivência harmoniosa.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="p-3 bg-brand-medium/10 text-brand-medium rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-base">Incentivo ao Conhecimento</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Estímulo constante ao hábito de pensar, questionar e descobrir novas soluções.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="p-3 bg-brand-medium/10 text-brand-medium rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-users-between-lines"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-base">Participação da Comunidade</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Escola e famílias conectadas ativamente no desenvolvimento dos estudantes.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200/80 flex items-start gap-4">
+                        <div class="p-3 bg-brand-medium/10 text-brand-medium rounded-xl text-xl shrink-0">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-brand-dark text-base">Desenvolvimento Integral</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Foco tanto na capacitação acadêmica quanto nas competências éticas e sociais.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== 10. CONTATO & LOCALIZAÇÃO ==================== -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-medium font-bold text-sm tracking-widest uppercase bg-brand-medium/10 px-3 py-1 rounded-full">Fale Conosco</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark mt-3">Canais de Atendimento</h2>
+                    <p class="text-slate-600 mt-2 text-sm">Estamos prontos para atender você e sua família.</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Informações Institucionais de Contato (Editáveis) -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="bg-brand-dark text-white p-8 rounded-2xl shadow-lg relative overflow-hidden">
+                            <h3 class="text-2xl font-bold mb-6 text-brand-gold">Informações Oficiais</h3>
+
+                            <div class="space-y-5 text-sm">
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot text-brand-gold text-lg mt-1"></i>
+                                    <div>
+                                        <strong class="block text-slate-300">Endereço (Editável):</strong>
+                                        <span class="text-white">[EDITÁVEL: Rua da Educação, 123 - Bairro Escolar, Cidade - UF]</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-phone text-brand-gold text-lg mt-1"></i>
+                                    <div>
+                                        <strong class="block text-slate-300">Telefone Institucional (Editável):</strong>
+                                        <span class="text-white">[EDITÁVEL: (00) 1234-5678]</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-envelope text-brand-gold text-lg mt-1"></i>
+                                    <div>
+                                        <strong class="block text-slate-300">E-mail Oficial (Editável):</strong>
+                                        <span class="text-white">[EDITÁVEL: contato@colegioambroisa.com.br]</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fa-solid fa-clock text-brand-gold text-lg mt-1"></i>
+                                    <div>
+                                        <strong class="block text-slate-300">Horário de Atendimento (Editável):</strong>
+                                        <span class="text-white">Segunda a Sexta-feira: 07h00 às 18h00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Placeholder para Mapa de Localização -->
+                        <div class="bg-brand-light border-2 border-dashed border-slate-300 rounded-2xl h-48 flex flex-col items-center justify-center p-4 text-center">
+                            <i class="fa-solid fa-map-location-dot text-3xl text-brand-medium mb-2"></i>
+                            <span class="text-xs font-bold text-slate-700">Espaço Reservado para o Mapa</span>
+                            <span class="text-xs text-slate-500 mt-1">O código de incorporação do Google Maps pode ser inserido aqui assim que o endereço oficial for fornecido.</span>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de Mensagem com Validação Básica -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-soft">
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Envie uma Mensagem</h3>
+                            <p class="text-xs text-slate-500 mb-6">Preencha o formulário abaixo para entrar em contato com nossa equipe pedagógica.</p>
+
+                            <!-- Caixa de Alerta de Mensagem Enviada / Erro -->
+                            <div id="form-feedback" class="hidden mb-6 p-4 rounded-xl text-sm"></div>
+
+                            <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-xs font-bold text-brand-dark uppercase mb-1">Nome Completo *</label>
+                                    <input type="text" id="name" required placeholder="Digite seu nome completo" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-medium focus:border-transparent text-sm">
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="email" class="block text-xs font-bold text-brand-dark uppercase mb-1">E-mail de Contato *</label>
+                                        <input type="email" id="email" required placeholder="seuemail@exemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-medium focus:border-transparent text-sm">
+                                    </div>
+                                    <div>
+                                        <label for="subject" class="block text-xs font-bold text-brand-dark uppercase mb-1">Assunto *</label>
+                                        <input type="text" id="subject" required placeholder="Ex: Informações de Matrícula" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-medium focus:border-transparent text-sm">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-xs font-bold text-brand-dark uppercase mb-1">Mensagem *</label>
+                                    <textarea id="message" rows="4" required placeholder="Escreva sua mensagem aqui..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-medium focus:border-transparent text-sm"></textarea>
+                                </div>
+
+                                <div class="p-3 bg-slate-50 rounded-lg text-xs text-slate-500 border border-slate-200">
+                                    <i class="fa-solid fa-code text-brand-medium mr-1"></i> <strong>Nota para Desenvolvedores:</strong> Este formulário possui validação em JavaScript. Para envio real de mensagens por e-mail, conecte o endpoint com um serviço backend como Formspree, EmailJS ou servidor PHP/Node.
+                                </div>
+
+                                <button type="submit" class="w-full py-4 rounded-xl bg-brand-medium text-white font-bold text-sm hover:bg-brand-dark transition-colors shadow-md flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== 11. BOTÃO FLUTUANTE DO WHATSAPP ==================== -->
+    <!-- Substitua o número abaixo '5500999999999' pelo número oficial com DDD -->
+    <a href="https://wa.me/5500999999999?text=Ol%C3%A1!%20Gostaria%20de%20obter%20informa%C3%A7%C3%B5es%20sobre%20o%20Col%C3%A9gio%20Ambr%C3%B3isa." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-emerald-600 hover:scale-110 transition-all border-2 border-white focus:outline-none"
+       aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== 12. RODAPÉ ==================== -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Coluna 1: Sobre -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-brand-gold text-brand-dark flex items-center justify-center font-bold text-xl">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight text-white">Colégio Ambróisa</span>
+                    </div>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Instituição comprometida com a formação integral, com o conhecimento crítico e com o acolhimento de alunos e famílias.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Links Rápidos -->
+                <div>
+                    <h4 class="text-sm font-bold text-brand-gold uppercase tracking-wider mb-4">Navegação</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#inicio" class="hover:text-brand-gold transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre a Escola</a></li>
+                        <li><a href="#ensino" class="hover:text-brand-gold transition-colors">Proposta Pedagógica</a></li>
+                        <li><a href="#turnos" class="hover:text-brand-gold transition-colors">Turnos de Funcionamento</a></li>
+                        <li><a href="#estrutura" class="hover:text-brand-gold transition-colors">Estrutura da Escola</a></li>
+                        <li><a href="#avisos" class="hover:text-brand-gold transition-colors">Mural de Avisos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contatos Oficiais -->
+                <div>
+                    <h4 class="text-sm font-bold text-brand-gold uppercase tracking-wider mb-4">Contato Institucional</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><i class="fa-solid fa-phone mr-1.5 text-brand-gold"></i> [EDITÁVEL: (00) 1234-5678]</li>
+                        <li><i class="fa-solid fa-envelope mr-1.5 text-brand-gold"></i> [EDITÁVEL: contato@colegioambroisa.com.br]</li>
+                        <li><i class="fa-solid fa-location-dot mr-1.5 text-brand-gold"></i> [EDITÁVEL: Endereço da Escola]</li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Redes Sociais Oficiais -->
+                <div>
+                    <h4 class="text-sm font-bold text-brand-gold uppercase tracking-wider mb-4">Redes Sociais</h4>
+                    <p class="text-xs text-slate-300 mb-4">Siga nossas páginas oficiais para acompanhar o dia a dia da comunidade escolar:</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-dark transition-all" aria-label="Facebook Oficial">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-dark transition-all" aria-label="Instagram Oficial">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-dark transition-all" aria-label="YouTube Oficial">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Direitos Autorais com Ano Dinâmico via JavaScript -->
+            <div class="pt-8 text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>&copy; <span id="current-year"></span> Colégio Ambróisa. Todos os direitos reservados.</p>
+                <p class="text-slate-500">Desenvolvido com foco em acessibilidade e transparência educativa.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== RECURSOS TÉCNICOS & INTERATIVIDADE JAVASCRIPT ==================== -->
+    <script>
+        // 1. Atualização Automática do Ano nos Direitos Autorais
+        document.addEventListener('DOMContentLoaded', () => {
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+
+        // 2. Controle do Menu Mobile (Abrir e Fechar)
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.contains('hidden');
+                if (isHidden) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Fechar menu ao clicar em qualquer link móvel
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+
+        // 3. Modal da Galeria de Fotos (Lightbox)
+        function openGalleryModal(imageSrc, captionText) {
+            const modal = document.getElementById('gallery-modal');
+            const img = document.getElementById('gallery-modal-img');
+            const caption = document.getElementById('gallery-modal-caption');
+
+            if (modal && img && caption) {
+                img.src = imageSrc;
+                caption.textContent = captionText;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Impede rolagem de fundo
+            }
+        }
+
+        function closeGalleryModal() {
+            const modal = document.getElementById('gallery-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; // Reativa rolagem
+            }
+        }
+
+        // 4. Modal para o Mural de Avisos
+        function openNoticeModal(title, date, category, content) {
+            const modal = document.getElementById('notice-modal');
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-date').textContent = date;
+            document.getElementById('modal-tag').textContent = category;
+            document.getElementById('modal-body').textContent = content;
+
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeNoticeModal() {
+            const modal = document.getElementById('notice-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // 5. Validação do Formulário de Contato
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const feedback = document.getElementById('form-feedback');
+
+            if (!name || !email || !subject || !message) {
+                feedback.className = "mb-6 p-4 rounded-xl text-sm bg-red-100 text-red-800 border border-red-200";
+                feedback.textContent = "Por favor, preencha todos os campos obrigatórios do formulário.";
+                feedback.classList.remove('hidden');
+                return;
+            }
+
+            // Exemplo de sucesso
+            feedback.className = "mb-6 p-4 rounded-xl text-sm bg-emerald-100 text-emerald-800 border border-emerald-200";
+            feedback.innerHTML = `<strong>Mensagem registrada com sucesso!</strong><br>Obrigado pelo contato, ${name}. Nossa equipe retornará em breve.`;
+            feedback.classList.remove('hidden');
+
+            // Limpa o formulário após validação
+            document.getElementById('contact-form').reset();
+        }
+
+        // Fechar modais com tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeGalleryModal();
+                closeNoticeModal();
+            }
+        });
+    </script>
+</body>
+</html>
